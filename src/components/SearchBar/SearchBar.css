@@ -69,7 +69,7 @@
 }
 
 .SearchBar-suggestions li:hover {
-  background-color: #f2f2f2;
+  background-color: #e6f2ff;
 }
 
 .SearchBar-fields input {
@@ -81,7 +81,7 @@
   font-weight: 500;
 }
 
-.SearchBar-fields input:last-child {
+.SearchBar-fields input:first-child {
   margin-right: 10px;
 }
 
