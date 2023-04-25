@@ -53,6 +53,7 @@ const Yelp = {
     } catch (error) {
       alert(error.message)
       console.error(error)
+      return []
     }
   }
 }
