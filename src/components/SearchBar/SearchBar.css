@@ -81,8 +81,8 @@
   font-weight: 500;
 }
 
-.SearchBar-fields input:first-child {
-  margin-right: 10px;
+.SearchBar-fields input:last-child {
+  margin-left: 10px;
 }
 
 .SearchBar-fields input.error {
