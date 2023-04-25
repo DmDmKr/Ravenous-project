@@ -1,0 +1,35 @@
+.Pagination {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.Pagination button {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  color: #cca353;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  outline: none;
+  padding: 0.6rem 0.8rem;
+  transition: all 0.2s;
+}
+
+.Pagination button:hover,
+.Pagination button:focus {
+  background-color: #cca353;
+  color: #fff;
+}
+
+.Pagination .active {
+  background-color: #cca353;
+  color: #fff;
+}
+
+.Pagination .dots {
+  pointer-events: none;
+}

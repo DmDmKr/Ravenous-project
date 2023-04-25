@@ -1,0 +1,16 @@
+.no-businesses-shown {
+  display: flex;
+  justify-content: center;
+  background-color: #cca353;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+}
+
+.no-businesses-shown p {
+  align-self: center;
+  font-size: 50px;
+  font-style: italic;
+  color: #fff;
+}
