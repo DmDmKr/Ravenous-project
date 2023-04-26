@@ -39,22 +39,24 @@ const Yelp = {
   },
 
   async autocomplete(text) {
-    try {
-      const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/autocomplete?text=${text}`, {
-        headers: {
-          Authorization: `Bearer ${apiKey}`
+    if (text.length > 3) {
+      try {
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/autocomplete?text=${text}`, {
+          headers: {
+            Authorization: `Bearer ${apiKey}`
+          }
+        })
+        const jsonResponse = await response.json()
+        if (jsonResponse.terms) {
+          const suggestions = jsonResponse.terms.map((term) => term.text)
+          return suggestions
         }
-      })
-      const jsonResponse = await response.json()
-      if (jsonResponse.terms) {
-        const suggestions = jsonResponse.terms.map((term) => term.text)
-        return suggestions
+      } catch (error) {
+        alert(error.message)
+        console.error(error)
+        return []
       }
-    } catch (error) {
-      alert(error.message)
-      console.error(error)
-      return []
-    }
+    } else return []
   }
 }
 
