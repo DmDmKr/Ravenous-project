@@ -30,8 +30,8 @@ const Yelp = {
         }
       })
       .catch((error) => {
-        if (error.response && error.response.status === 429) {
-          alert('You exceeded your search requests limit for today!')
+        if (error instanceof SyntaxError) {
+          alert('Sorry, we could not process your request at this time. Please try again later.')
         } else {
           alert(error.message)
         }
@@ -52,7 +52,11 @@ const Yelp = {
           return suggestions
         }
       } catch (error) {
-        alert(error.message)
+        if (error instanceof SyntaxError) {
+          alert('Sorry, we could not process your request at this time. Please try again later.')
+        } else {
+          alert(error.message)
+        }
         console.error(error)
         return []
       }
